@@ -13,6 +13,7 @@
   --font-hurricane: "Hurricane", cursive;
   --font-engagement: "Engagement", cursive;
   --font-cookie: "Cookie", cursive;
+  --font-merienda: "Merienda", cursive;
 }
 
 *,
@@ -28,11 +29,11 @@ body {
   color: #1a1a1a;
   -webkit-font-smoothing: antialiased;
   text-align: center;
-  font-family: var(--font-cookie), cursive;
+  font-family: var(--font-merienda), cursive;
 }
 
 * {
-  font-family: var(--font-cookie), cursive;
+  font-family: var(--font-merienda), cursive;
 }
 
 p, h2, h3, h4, h5, h6 {

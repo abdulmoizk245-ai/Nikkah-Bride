@@ -1,4 +1,4 @@
-import { Dynalight, Hurricane, Engagement, Cookie } from "next/font/google";
+import { Dynalight, Hurricane, Engagement, Cookie, Merienda } from "next/font/google";
 import "./globals.css";
 
 const dynalight = Dynalight({
@@ -25,6 +25,12 @@ const cookie = Cookie({
   subsets: ["latin"],
 });
 
+const merienda = Merienda({
+  variable: "--font-merienda",
+  weight: ["400", "700"],
+  subsets: ["latin"],
+});
+
 export const metadata = {
   title: "Rafey & Minahil | Nikkah Ceremony 2026",
   description:
@@ -33,7 +39,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${dynalight.variable} ${hurricane.variable} ${engagement.variable} ${cookie.variable}`}>
+    <html lang="en" className={`${dynalight.variable} ${hurricane.variable} ${engagement.variable} ${cookie.variable} ${merienda.variable}`}>
       <body>{children}</body>
     </html>
   );

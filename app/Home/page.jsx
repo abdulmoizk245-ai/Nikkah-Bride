@@ -113,7 +113,7 @@ export default function Wedding() {
               style={{
                 position: "relative",
                 zIndex: 2,
-                fontFamily: "var(--font-cookie), cursive",
+                fontFamily: "var(--font-merienda), cursive",
                 fontSize: "0.75rem",
                 letterSpacing: "0.25em",
                 color: "#6a5a4a",
@@ -230,7 +230,7 @@ export default function Wedding() {
           {/* Bismillah */}
           <p
             style={{
-              fontFamily: "var(--font-cookie), cursive",
+              fontFamily: "var(--font-merienda), cursive",
               fontSize: "clamp(1rem, 3vw, 1.4rem)",
               color: "#5a4a3a",
               direction: "rtl",
@@ -242,7 +242,7 @@ export default function Wedding() {
           </p>
           <p
             style={{
-              fontFamily: "var(--font-cookie), cursive",
+              fontFamily: "var(--font-merienda), cursive",
               fontSize: "clamp(1rem, 3vw, 1.4rem)",
               color: "#5a4a3a",
               direction: "rtl",
@@ -256,7 +256,7 @@ export default function Wedding() {
           {/* Nikkah Ceremony label */}
           <p
             style={{
-              fontFamily: "var(--font-cookie), cursive",
+              fontFamily: "var(--font-merienda), cursive",
               fontSize: "clamp(0.85rem, 2vw, 1rem)",
               letterSpacing: "0.22em",
               color: "#8a7a6a",
@@ -284,7 +284,7 @@ export default function Wedding() {
           {/* Couple names */}
           {/* <h1
             style={{
-              fontFamily: "var(--font-cookie), cursive",
+              fontFamily: "var(--font-merienda), cursive",
               fontSize: "clamp(2.8rem, 9vw, 5rem)",
               color: "#3c3228",
               fontWeight: 400,
@@ -299,7 +299,7 @@ export default function Wedding() {
             <div className="flex flex-col items-center gap-1">
               <h1
                 style={{
-                  fontFamily: "var(--font-cookie), cursive",
+                  fontFamily: "var(--font-merienda), cursive",
                   fontSize: "clamp(2.8rem, 25vw, 5rem)",
                   color: "#3c3228",
                   fontWeight: 400,
@@ -313,7 +313,7 @@ export default function Wedding() {
               <p
                 className="text-center text-[17px] font-medium tracking-[0.14em] text-[#3c3228]/80 md:text-[16px]"
                 style={{
-                  fontFamily: "var(--font-cookie), cursive",
+                  fontFamily: "var(--font-merienda), cursive",
                   wordSpacing: "0.08em",
                 }}
               >
@@ -325,7 +325,7 @@ export default function Wedding() {
             <h1
               className="md:mt-0"
               style={{
-                fontFamily: "var(--font-cookie), cursive",
+                fontFamily: "var(--font-merienda), cursive",
                 fontSize: "clamp(2.8rem, 9vw, 5rem)",
                 color: "#3c3228",
                 fontWeight: 400,
@@ -340,7 +340,7 @@ export default function Wedding() {
             <div className="flex flex-col items-center gap-1">
               <h1
                 style={{
-                  fontFamily: "var(--font-cookie), cursive",
+                  fontFamily: "var(--font-merienda), cursive",
                   fontSize: "clamp(2.8rem, 25vw, 5rem)",
                   color: "#3c3228",
                   fontWeight: 400,
@@ -354,7 +354,7 @@ export default function Wedding() {
               <p
                 className="text-center  text-[19px] font-medium tracking-[0.14em] text-[#3c3228]/80 md:text-[16px]"
                 style={{
-                  fontFamily: "var(--font-cookie), cursive",
+                  fontFamily: "var(--font-merienda), cursive",
                   wordSpacing: "0.08em",
                 }}
               >
@@ -366,7 +366,7 @@ export default function Wedding() {
           {/* Invitation text */}
           <p
             style={{
-              fontFamily: "var(--font-cookie), cursive",
+              fontFamily: "var(--font-merienda), cursive",
               fontSize: "clamp(0.85rem, 2vw, 1rem)",
               letterSpacing: "0.18em",
               color: "#6a5a4a",
@@ -403,7 +403,7 @@ export default function Wedding() {
               />
               <p
                 style={{
-                  fontFamily: "var(--font-cookie), cursive",
+                  fontFamily: "var(--font-merienda), cursive",
                   fontSize: "clamp(0.85rem, 2vw, 1rem)",
                   letterSpacing: "0.2em",
                   color: "#6a5a4a",
@@ -424,7 +424,7 @@ export default function Wedding() {
             {/* 23 */}
             <p
               style={{
-                fontFamily: "var(--font-cookie), cursive",
+                fontFamily: "var(--font-merienda), cursive",
                 fontSize: "clamp(3rem, 10vw, 5rem)",
                 color: "#3c3228",
                 fontWeight: 700,
@@ -446,7 +446,7 @@ export default function Wedding() {
               />
               <p
                 style={{
-                  fontFamily: "var(--font-cookie), cursive",
+                  fontFamily: "var(--font-merienda), cursive",
                   fontSize: "clamp(0.85rem, 2vw, 1rem)",
                   letterSpacing: "0.2em",
                   color: "#6a5a4a",
@@ -468,7 +468,7 @@ export default function Wedding() {
           {/* THURSDAY */}
           <p
             style={{
-              fontFamily: "var(--font-cookie), cursive",
+              fontFamily: "var(--font-merienda), cursive",
               fontSize: "clamp(0.85rem, 2vw, 1rem)",
               letterSpacing: "0.25em",
               color: "#8a7a6a",
@@ -481,7 +481,7 @@ export default function Wedding() {
           {/* TO BE HELD AT */}
           <p
             style={{
-              fontFamily: "var(--font-cookie), cursive",
+              fontFamily: "var(--font-merienda), cursive",
               fontSize: "clamp(0.85rem, 2vw, 1rem)",
               letterSpacing: "0.2em",
               color: "#6a5a4a",
@@ -494,7 +494,7 @@ export default function Wedding() {
           {/* Venue */}
           <h2
             style={{
-              fontFamily: "var(--font-cookie), cursive",
+              fontFamily: "var(--font-merienda), cursive",
               fontSize: "clamp(1.6rem, 5vw, 2.4rem)",
               color: "#3c3228",
               fontWeight: 400,
@@ -508,7 +508,7 @@ export default function Wedding() {
           {/* Time */}
           <p
             style={{
-              fontFamily: "var(--font-cookie), cursive",
+              fontFamily: "var(--font-merienda), cursive",
               fontSize: "clamp(0.85rem, 2vw, 1rem)",
               letterSpacing: "0.2em",
               color: "#6a5a4a",
@@ -530,7 +530,7 @@ export default function Wedding() {
         >
           <p
             style={{
-              fontFamily: "var(--font-cookie), cursive",
+              fontFamily: "var(--font-merienda), cursive",
               fontSize: "clamp(0.85rem, 2vw, 1rem)",
               letterSpacing: "0.25em",
               color: "#8a7a6a",
@@ -541,7 +541,7 @@ export default function Wedding() {
           </p>
           <p
             style={{
-              fontFamily: "var(--font-cookie), cursive",
+              fontFamily: "var(--font-merienda), cursive",
               fontSize: "clamp(0.85rem, 2vw, 1rem)",
               letterSpacing: "0.25em",
               color: "#8a7a6a",
@@ -613,7 +613,7 @@ export default function Wedding() {
         >
           <h1
             style={{
-              fontFamily: "var(--font-cookie), cursive",
+              fontFamily: "var(--font-merienda), cursive",
               fontSize: "clamp(2.8rem, 8vw, 5rem)",
               color: "#3c3228",
               fontWeight: 400,
@@ -626,7 +626,7 @@ export default function Wedding() {
 
           <p
             style={{
-              fontFamily: "var(--font-cookie), cursive",
+              fontFamily: "var(--font-merienda), cursive",
               fontSize: "clamp(0.9rem, 2.2vw, 1.05rem)",
               letterSpacing: "0.22em",
               color: "#7a6a5a",
@@ -654,7 +654,7 @@ export default function Wedding() {
                 key={`days-${time.days}`}
                 className="count-number"
                 style={{
-                  fontFamily: "var(--font-cookie), cursive",
+                  fontFamily: "var(--font-merienda), cursive",
                   fontSize: "clamp(3rem, 9vw, 5.5rem)",
                   color: "#3c3228",
                   fontWeight: 400,
@@ -665,7 +665,7 @@ export default function Wedding() {
               </div>
               <p
                 style={{
-                  fontFamily: "var(--font-cookie), cursive",
+                  fontFamily: "var(--font-merienda), cursive",
                   fontSize: "clamp(0.85rem, 2vw, 1rem)",
                   letterSpacing: "0.2em",
                   color: "#7a6a5a",
@@ -696,7 +696,7 @@ export default function Wedding() {
                 key={`hours-${time.hours}`}
                 className="count-number"
                 style={{
-                  fontFamily: "var(--font-cookie), cursive",
+                  fontFamily: "var(--font-merienda), cursive",
                   fontSize: "clamp(3rem, 9vw, 5.5rem)",
                   color: "#3c3228",
                   fontWeight: 400,
@@ -707,7 +707,7 @@ export default function Wedding() {
               </div>
               <p
                 style={{
-                  fontFamily: "var(--font-cookie), cursive",
+                  fontFamily: "var(--font-merienda), cursive",
                   fontSize: "clamp(0.85rem, 2vw, 1rem)",
                   letterSpacing: "0.2em",
                   color: "#7a6a5a",
@@ -738,7 +738,7 @@ export default function Wedding() {
                 key={`minutes-${time.minutes}`}
                 className="count-number"
                 style={{
-                  fontFamily: "var(--font-cookie), cursive",
+                  fontFamily: "var(--font-merienda), cursive",
                   fontSize: "clamp(3rem, 9vw, 5.5rem)",
                   color: "#3c3228",
                   fontWeight: 400,
@@ -749,7 +749,7 @@ export default function Wedding() {
               </div>
               <p
                 style={{
-                  fontFamily: "var(--font-cookie), cursive",
+                  fontFamily: "var(--font-merienda), cursive",
                   fontSize: "clamp(0.85rem, 2vw, 1rem)",
                   letterSpacing: "0.2em",
                   color: "#7a6a5a",
@@ -779,7 +779,7 @@ export default function Wedding() {
                 key={`seconds-${time.seconds}`}
                 className="count-number"
                 style={{
-                  fontFamily: "var(--font-cookie), cursive",
+                  fontFamily: "var(--font-merienda), cursive",
                   fontSize: "clamp(3rem, 9vw, 5.5rem)",
                   color: "#3c3228",
                   fontWeight: 400,
@@ -791,7 +791,7 @@ export default function Wedding() {
 
               <p
                 style={{
-                  fontFamily: "var(--font-cookie), cursive",
+                  fontFamily: "var(--font-merienda), cursive",
                   fontSize: "clamp(0.85rem, 2vw, 1rem)",
                   letterSpacing: "0.2em",
                   color: "#7a6a5a",
@@ -828,7 +828,7 @@ export default function Wedding() {
         {/* Section Title */}
         {/* <h2
           style={{
-            fontFamily: "var(--font-cookie), cursive",
+            fontFamily: "var(--font-merienda), cursive",
             fontSize: "clamp(2.4rem, 7vw, 3.8rem)",
             color: "#3c3228",
             fontWeight: 400,
@@ -883,7 +883,7 @@ export default function Wedding() {
           {/* Event Type */}
           {/* <p
               style={{
-                fontFamily: "var(--font-cookie), cursive",
+                fontFamily: "var(--font-merienda), cursive",
                 fontSize: "clamp(0.6rem, 1.6vw, 0.72rem)",
                 letterSpacing: "0.2em",
                 color: "#B76E79",
@@ -897,7 +897,7 @@ export default function Wedding() {
           {/* Venue Name Cursive 1 */}
           {/* <h3
               style={{
-                fontFamily: "var(--font-cookie), cursive",
+                fontFamily: "var(--font-merienda), cursive",
                 fontSize: "clamp(2rem, 6vw, 2.8rem)",
                 color: "#3c3228",
                 fontWeight: 400,
@@ -911,7 +911,7 @@ export default function Wedding() {
           {/* Venue Name Cursive 2 */}
           {/* <h3
               style={{
-                fontFamily: "var(--font-cookie), cursive",
+                fontFamily: "var(--font-merienda), cursive",
                 fontSize: "clamp(2rem, 6vw, 2.8rem)",
                 color: "#3c3228",
                 fontWeight: 400,
@@ -925,7 +925,7 @@ export default function Wedding() {
           {/* Location description */}
           {/* <p
               style={{
-                fontFamily: "var(--font-cookie), cursive",
+                fontFamily: "var(--font-merienda), cursive",
                 fontSize: "clamp(0.7rem, 1.8vw, 0.82rem)",
                 color: "#8a7f74",
                 marginBottom: "1.4rem",
@@ -948,7 +948,7 @@ export default function Wedding() {
           {/* Date */}
           {/* <p
               style={{
-                fontFamily: "var(--font-cookie), cursive",
+                fontFamily: "var(--font-merienda), cursive",
                 fontSize: "clamp(0.72rem, 1.8vw, 0.85rem)",
                 color: "#7a6a5a",
                 marginBottom: "0.5rem",
@@ -961,7 +961,7 @@ export default function Wedding() {
           {/* Time */}
           {/* <p
               style={{
-                fontFamily: "var(--font-cookie), cursive",
+                fontFamily: "var(--font-merienda), cursive",
                 fontSize: "clamp(1.6rem, 4.5vw, 2.2rem)",
                 color: "#3c3228",
                 fontWeight: 400,
@@ -975,7 +975,7 @@ export default function Wedding() {
           {/* <a
               href="#"
               style={{
-                fontFamily: "var(--font-cookie), cursive",
+                fontFamily: "var(--font-merienda), cursive",
                 fontSize: "clamp(0.6rem, 1.6vw, 0.72rem)",
                 letterSpacing: "0.2em",
                 color: "#B76E79",
@@ -1034,7 +1034,7 @@ export default function Wedding() {
             {/* Event Type */}
             {/* <p
               style={{
-                fontFamily: "var(--font-cookie), cursive",
+                fontFamily: "var(--font-merienda), cursive",
                 fontSize: "clamp(0.78rem, 1.9vw, 0.92rem)",
                 letterSpacing: "0.28em",
                 wordSpacing: "0.1em",
@@ -1048,7 +1048,7 @@ export default function Wedding() {
             {/* Venue Name Cursive 1 */}
             <h3
               style={{
-                fontFamily: "var(--font-cookie), cursive",
+                fontFamily: "var(--font-merienda), cursive",
                 fontSize: "clamp(2rem, 6vw, 2.5rem)",
                 color: "#3c3228",
                 fontWeight: 600,
@@ -1062,7 +1062,7 @@ export default function Wedding() {
             {/* Venue Name Cursive 2 */}
             <h3
               style={{
-                fontFamily: "var(--font-cookie), cursive",
+                fontFamily: "var(--font-merienda), cursive",
                 fontSize: "clamp(2rem, 6vw, 2.5rem)",
                 color: "#3c3228",
                 fontWeight: 600,
@@ -1086,7 +1086,7 @@ export default function Wedding() {
             {/* Date */}
             <p
               style={{
-                fontFamily: "var(--font-cookie), cursive",
+                fontFamily: "var(--font-merienda), cursive",
                 fontSize: "clamp(1rem, 2.4vw, 1.2rem)",
                 color: "#7a6a5a",
                 marginBottom: "0.5rem",
@@ -1100,7 +1100,7 @@ export default function Wedding() {
             {/* Time */}
             <p
               style={{
-                fontFamily: "var(--font-cookie), cursive",
+                fontFamily: "var(--font-merienda), cursive",
                 fontSize: "clamp(1.8rem, 5vw, 2.5rem)",
                 color: "#3c3228",
                 fontWeight: 400,
@@ -1117,7 +1117,7 @@ export default function Wedding() {
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                fontFamily: "var(--font-cookie), cursive",
+                fontFamily: "var(--font-merienda), cursive",
                 fontSize: "clamp(0.78rem, 1.9vw, 0.92rem)",
                 letterSpacing: "0.28em",
                 wordSpacing: "0.1em",
@@ -1217,7 +1217,7 @@ export default function Wedding() {
           {/* Wedding Weekend heading */}
           <h2
             style={{
-              fontFamily: "var(--font-cookie), cursive",
+              fontFamily: "var(--font-merienda), cursive",
               fontSize: "clamp(2.2rem, 7vw, 3.5rem)",
               color: "#3c3228",
               fontWeight: 600,
@@ -1231,7 +1231,7 @@ export default function Wedding() {
           {/* Date range */}
           <p
             style={{
-              fontFamily: "var(--font-cookie), cursive",
+              fontFamily: "var(--font-merienda), cursive",
               fontSize: "clamp(1rem, 2.4vw, 1.2rem)",
               color: "#7a6a5a",
               marginBottom: "clamp(2rem, 6vw, 3.5rem)",
@@ -1245,7 +1245,7 @@ export default function Wedding() {
           {/* Description */}
           <p
             style={{
-              fontFamily: "var(--font-cookie), cursive",
+              fontFamily: "var(--font-merienda), cursive",
               fontSize: "clamp(1.4rem, 2.4vw, 1.2rem)",
               color: "#8a7f74",
               fontStyle: "italic",
@@ -1328,7 +1328,7 @@ export default function Wedding() {
                 {/* Time */}
                 <p
                   style={{
-                    fontFamily: "var(--font-cookie), cursive",
+                    fontFamily: "var(--font-merienda), cursive",
                     fontSize: "clamp(1rem, 2.2vw, 1.15rem)",
                     color: "#B76E79",
                     letterSpacing: "0.1em",
@@ -1341,7 +1341,7 @@ export default function Wedding() {
                 {/* Label */}
                 <p
                   style={{
-                    fontFamily: "var(--font-cookie), cursive",
+                    fontFamily: "var(--font-merienda), cursive",
                     fontSize: "clamp(1.05rem, 2.5vw, 1.2rem)",
                     color: "#3c3228",
                     lineHeight: 1.5,
@@ -1439,7 +1439,7 @@ export default function Wedding() {
           {/* Names */}
           {/* <h2
             style={{
-              fontFamily: "var(--font-cookie), cursive",
+              fontFamily: "var(--font-merienda), cursive",
               fontSize: "clamp(1.8rem, 5.5vw, 2.6rem)",
               color: "#3c3228",
               fontWeight: 400,
@@ -1453,7 +1453,7 @@ export default function Wedding() {
           {/* Date */}
           <p
             style={{
-              fontFamily: "var(--font-cookie), cursive",
+              fontFamily: "var(--font-merienda), cursive",
               fontSize: "clamp(1rem, 2.4vw, 1.2rem)",
               color: "#7a6a5a",
               letterSpacing: "0.12em",
@@ -1472,7 +1472,7 @@ export default function Wedding() {
           >
             <h3
               style={{
-                fontFamily: "var(--font-cookie), cursive",
+                fontFamily: "var(--font-merienda), cursive",
                 fontSize: "clamp(2rem, 6vw, 2.8rem)",
                 color: "#3c3228",
                 fontWeight: 600,
@@ -1485,7 +1485,7 @@ export default function Wedding() {
 
             <p
               style={{
-                fontFamily: "var(--font-cookie), cursive",
+                fontFamily: "var(--font-merienda), cursive",
                 fontSize: "clamp(1.4rem, 2.4vw, 1.2rem)",
                 color: "#7a6a5a",
                 lineHeight: 1.8,
@@ -1509,7 +1509,7 @@ export default function Wedding() {
               <div>
                 <p
                   style={{
-                    fontFamily: "var(--font-cookie), cursive",
+                    fontFamily: "var(--font-merienda), cursive",
                     fontSize: "1rem",
                     color: "#3c3228",
                     fontWeight: 700,
@@ -1521,7 +1521,7 @@ export default function Wedding() {
                 <a
                   href="tel:+923336660400"
                   style={{
-                    fontFamily: "var(--font-cookie), cursive",
+                    fontFamily: "var(--font-merienda), cursive",
                     fontSize: "0.82rem",
                     color: "#B76E79",
                     textDecoration: "none",
@@ -1535,7 +1535,7 @@ export default function Wedding() {
               <div>
                 <p
                   style={{
-                    fontFamily: "var(--font-cookie), cursive",
+                    fontFamily: "var(--font-merienda), cursive",
                     fontSize: "1rem",
                     color: "#3c3228",
                     fontWeight: 700,
@@ -1547,7 +1547,7 @@ export default function Wedding() {
                 <a
                   href="tel:+923214022085"
                   style={{
-                    fontFamily: "var(--font-cookie), cursive",
+                    fontFamily: "var(--font-merienda), cursive",
                     fontSize: "0.82rem",
                     color: "#B76E79",
                     textDecoration: "none",
@@ -1561,7 +1561,7 @@ export default function Wedding() {
               <div>
                 <p
                   style={{
-                    fontFamily: "var(--font-cookie), cursive",
+                    fontFamily: "var(--font-merienda), cursive",
                     fontSize: "1rem",
                     color: "#3c3228",
                     fontWeight: 700,
@@ -1573,7 +1573,7 @@ export default function Wedding() {
                 <a
                   href="tel:+923214152766"
                   style={{
-                    fontFamily: "var(--font-cookie), cursive",
+                    fontFamily: "var(--font-merienda), cursive",
                     fontSize: "0.82rem",
                     color: "#B76E79",
                     textDecoration: "none",
@@ -1586,7 +1586,7 @@ export default function Wedding() {
               <div>
                 <p
                   style={{
-                    fontFamily: "var(--font-cookie), cursive",
+                    fontFamily: "var(--font-merienda), cursive",
                     fontSize: "1rem",
                     color: "#3c3228",
                     fontWeight: 700,
@@ -1598,7 +1598,7 @@ export default function Wedding() {
                 <a
                   href="tel:+923214149718"
                   style={{
-                    fontFamily: "var(--font-cookie), cursive",
+                    fontFamily: "var(--font-merienda), cursive",
                     fontSize: "0.82rem",
                     color: "#B76E79",
                     textDecoration: "none",
@@ -1611,7 +1611,7 @@ export default function Wedding() {
               <div>
                 <p
                   style={{
-                    fontFamily: "var(--font-cookie), cursive",
+                    fontFamily: "var(--font-merienda), cursive",
                     fontSize: "1rem",
                     color: "#3c3228",
                     fontWeight: 700,
@@ -1623,7 +1623,7 @@ export default function Wedding() {
                 <a
                   href="tel:+923218888973"
                   style={{
-                    fontFamily: "var(--font-cookie), cursive",
+                    fontFamily: "var(--font-merienda), cursive",
                     fontSize: "0.82rem",
                     color: "#B76E79",
                     textDecoration: "none",
@@ -1636,7 +1636,7 @@ export default function Wedding() {
               <div>
                 <p
                   style={{
-                    fontFamily: "var(--font-cookie), cursive",
+                    fontFamily: "var(--font-merienda), cursive",
                     fontSize: "1rem",
                     color: "#3c3228",
                     fontWeight: 700,
@@ -1648,7 +1648,7 @@ export default function Wedding() {
                 <a
                   href="tel:+923334422155"
                   style={{
-                    fontFamily: "var(--font-cookie), cursive",
+                    fontFamily: "var(--font-merienda), cursive",
                     fontSize: "0.82rem",
                     color: "#B76E79",
                     textDecoration: "none",
@@ -1660,7 +1660,7 @@ export default function Wedding() {
               </div>
                <p
               style={{
-                fontFamily: "var(--font-cookie), cursive",
+                fontFamily: "var(--font-merienda), cursive",
                 fontSize: "clamp(1.4rem, 2.4vw, 1.2rem)",
                 color: "#7a6a5a",
                 lineHeight: 1.8,
