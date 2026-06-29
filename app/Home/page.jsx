@@ -240,18 +240,7 @@ export default function Wedding() {
           >
             بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
           </p>
-          <p
-            style={{
-              fontFamily: "var(--font-merienda), cursive",
-              fontSize: "clamp(1rem, 3vw, 1.4rem)",
-              color: "#5a4a3a",
-              direction: "rtl",
-              marginBottom: "0.4rem",
-              lineHeight: 1.8,
-            }}
-          >
-            In The Name of Allah The Most Beneficent And The Most Merciful{" "}
-          </p>
+         
           <p
             style={{
               fontFamily: "var(--font-merienda), cursive",
