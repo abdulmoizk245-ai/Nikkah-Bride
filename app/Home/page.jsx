@@ -41,33 +41,33 @@ export default function Wedding() {
     return () => clearInterval(id);
   }, []);
 
-useEffect(() => {
-  if (!startIntro) return;
+  useEffect(() => {
+    if (!startIntro) return;
 
-  const audio = audioRef.current;
+    const audio = audioRef.current;
 
-  if (audio) {
-    audio.currentTime = 0;
-    audio.volume = 0.8;
-    audio.play().catch((err) => {
-      console.log("Audio blocked:", err);
-    });
-  }
+    if (audio) {
+      audio.currentTime = 0;
+      audio.volume = 0.8;
+      audio.play().catch((err) => {
+        console.log("Audio blocked:", err);
+      });
+    }
 
-  const timer = setTimeout(() => {
-    setShowIntro(false);
-  }, 4300);
+    const timer = setTimeout(() => {
+      setShowIntro(false);
+    }, 4300);
 
-  return () => {
-    clearTimeout(timer);
-  };
-}, [startIntro]);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [startIntro]);
 
   const pad = (n) => String(n).padStart(2, "0");
 
   return (
     <>
-    <audio ref={audioRef} src="/images/AU.mp3" preload="auto" loop />
+      <audio ref={audioRef} src="/images/AU.mp3" preload="auto" loop />
       {/* ── Hero Section ── */}
       <section
         style={{
@@ -82,79 +82,79 @@ useEffect(() => {
       >
         {/* video */}
         {!startIntro && showIntro && (
-  <button
-    onClick={() => setStartIntro(true)}
-    style={{
-      position: "fixed",
-      inset: 0,
-      zIndex: 999999,
-      background: "#f7f0e8",
-      border: "none",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      flexDirection: "column",
-      cursor: "pointer",
-    }}
-  >
-    <img
-      src="/images/opening.jpg"
-      alt=""
-      style={{
-        width: "100%",
-        height: "100%",
-        objectFit: "cover",
-        position: "absolute",
-        inset: 0,
-      }}
-    />
+          <button
+            onClick={() => setStartIntro(true)}
+            style={{
+              position: "fixed",
+              inset: 0,
+              zIndex: 999999,
+              background: "#f7f0e8",
+              border: "none",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexDirection: "column",
+              cursor: "pointer",
+            }}
+          >
+            <img
+              src="/images/opening.jpg"
+              alt=""
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                position: "absolute",
+                inset: 0,
+              }}
+            />
 
-    <span
-      style={{
-        position: "relative",
-        zIndex: 2,
-        fontFamily: "var(--font-cookie), cursive",
-        fontSize: "0.75rem",
-        letterSpacing: "0.25em",
-        color: "#6a5a4a",
-        background: "rgba(255,255,255,0.65)",
-        padding: "12px 18px",
-        borderRadius: "999px",
-      }}
-    >
-      TAP TO OPEN
-    </span>
-  </button>
-)}
+            <span
+              style={{
+                position: "relative",
+                zIndex: 2,
+                fontFamily: "var(--font-cookie), cursive",
+                fontSize: "0.75rem",
+                letterSpacing: "0.25em",
+                color: "#6a5a4a",
+                background: "rgba(255,255,255,0.65)",
+                padding: "12px 18px",
+                borderRadius: "999px",
+              }}
+            >
+              TAP TO OPEN
+            </span>
+          </button>
+        )}
 
-{startIntro && showIntro && (
-  <div
-    style={{
-      position: "fixed",
-      inset: 0,
-      width: "100%",
-      height: "100vh",
-      zIndex: 99999,
-      overflow: "hidden",
-      background: "transparent",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      pointerEvents: "none",
-    }}
-  >
-    <img
-      src="/images/opening.gif"
-      alt=""
-      style={{
-        width: "100%",
-        height: "100%",
-        objectFit: "cover",
-        display: "block",
-      }}
-    />
-  </div>
-)}
+        {startIntro && showIntro && (
+          <div
+            style={{
+              position: "fixed",
+              inset: 0,
+              width: "100%",
+              height: "100vh",
+              zIndex: 99999,
+              overflow: "hidden",
+              background: "transparent",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              pointerEvents: "none",
+            }}
+          >
+            <img
+              src="/images/opening.gif"
+              alt=""
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                display: "block",
+              }}
+            />
+          </div>
+        )}
         {/* Background image */}
         <Image
           src="/images/hero.jpg"
@@ -240,6 +240,18 @@ useEffect(() => {
           >
             بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
           </p>
+          <p
+            style={{
+              fontFamily: "var(--font-cookie), cursive",
+              fontSize: "clamp(1rem, 3vw, 1.4rem)",
+              color: "#5a4a3a",
+              direction: "rtl",
+              marginBottom: "0.4rem",
+              lineHeight: 1.8,
+            }}
+          >
+            In The Name of Allah The Most Beneficent And The Most Merciful{" "}
+          </p>
 
           {/* Nikkah Ceremony label */}
           <p
@@ -283,6 +295,47 @@ useEffect(() => {
             Rafey &amp; Minahil
           </h1> */}
           <div className="mb-5 flex flex-col items-center justify-center gap-3 md:flex-row md:items-start md:gap-6">
+            {/* Minahil */}
+            <div className="flex flex-col items-center gap-1">
+              <h1
+                style={{
+                  fontFamily: "var(--font-cookie), cursive",
+                  fontSize: "clamp(2.8rem, 25vw, 5rem)",
+                  color: "#3c3228",
+                  fontWeight: 400,
+                  lineHeight: 1,
+                  margin: 0,
+                }}
+              >
+                Minahil
+              </h1>
+
+              <p
+                className="text-center text-[17px] font-medium tracking-[0.14em] text-[#3c3228]/80 md:text-[16px]"
+                style={{
+                  fontFamily: "var(--font-cookie), cursive",
+                  wordSpacing: "0.08em",
+                }}
+              >
+                D/o Mr. &amp; Mrs. Muhammad Shahzad Rafi
+              </p>
+            </div>
+
+            {/* & */}
+            <h1
+              className="md:mt-0"
+              style={{
+                fontFamily: "var(--font-cookie), cursive",
+                fontSize: "clamp(2.8rem, 9vw, 5rem)",
+                color: "#3c3228",
+                fontWeight: 400,
+                lineHeight: 1,
+                margin: 0,
+              }}
+            >
+              &amp;
+            </h1>
+
             {/* Rafey */}
             <div className="flex flex-col items-center gap-1">
               <h1
@@ -308,47 +361,6 @@ useEffect(() => {
                 S/o Mr. &amp; Mrs. Faisal Azhar
               </p>
             </div>
-
-            {/* & */}
-            <h1
-              className="md:mt-0"
-              style={{
-                fontFamily: "var(--font-cookie), cursive",
-                fontSize: "clamp(2.8rem, 9vw, 5rem)",
-                color: "#3c3228",
-                fontWeight: 400,
-                lineHeight: 1,
-                margin: 0,
-              }}
-            >
-              &amp;
-            </h1>
-
-            {/* Minahil */}
-            <div className="flex flex-col items-center gap-1">
-              <h1
-                style={{
-                  fontFamily: "var(--font-cookie), cursive",
-                  fontSize: "clamp(2.8rem, 25vw, 5rem)",
-                  color: "#3c3228",
-                  fontWeight: 400,
-                  lineHeight: 1,
-                  margin: 0,
-                }}
-              >
-                Minahil
-              </h1>
-
-              <p
-                className="text-center text-[17px] font-medium tracking-[0.14em] text-[#3c3228]/80 md:text-[16px]"
-                style={{
-                  fontFamily: "var(--font-cookie), cursive",
-                  wordSpacing: "0.08em",
-                }}
-              >
-                &amp; D/o Mr. &amp; Mrs. Muhammad Shahzad Rafi
-              </p>
-            </div>
           </div>
 
           {/* Invitation text */}
@@ -365,9 +377,8 @@ useEffect(() => {
               marginBottom: "2.6rem",
             }}
           >
-            WE REQUEST THE PLEASURE OF YOUR COMPANY
-            <br />
-            TO CELEBRATE OUR EVENT ON
+            Mr & Mrs. Rafi Anwar Request the Pleasure of your company at the
+            Nikkah Ceremony <br /> of their Beloved Grand Daughter
           </p>
 
           {/* Date display: JULY | 23 | 2026 */}
@@ -544,7 +555,267 @@ useEffect(() => {
       </section>
 
       {/* ── Countdown Section ── */}
-     
+      <section
+        style={{
+          position: "relative",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          background: "#f7f0e8",
+          overflow: "hidden",
+          padding: "clamp(2.5rem, 6vw, 4rem) 0",
+        }}
+      >
+        {/* Left Pillar */}
+        <div
+          style={{
+            position: "absolute",
+            left: 0,
+            top: 0,
+            bottom: 0,
+            width: "clamp(60px, 14vw, 130px)",
+          }}
+        >
+          <Image
+            src="/images/column-left-Deau9Trj.png"
+            alt="left pillar"
+            fill
+            style={{ objectFit: "contain", objectPosition: "left center" }}
+            priority
+          />
+        </div>
+
+        {/* Right Pillar */}
+        <div
+          style={{
+            position: "absolute",
+            right: 0,
+            top: 0,
+            bottom: 0,
+            width: "clamp(60px, 14vw, 130px)",
+          }}
+        >
+          <Image
+            src="/images/column-right-DejZoXz8.png"
+            alt="right pillar"
+            fill
+            style={{ objectFit: "contain", objectPosition: "right center" }}
+            priority
+          />
+        </div>
+
+        {/* Center Content */}
+        <div
+          style={{
+            textAlign: "center",
+            padding: "2rem clamp(80px, 16vw, 160px)",
+          }}
+        >
+          <h1
+            style={{
+              fontFamily: "var(--font-cookie), cursive",
+              fontSize: "clamp(2.8rem, 8vw, 5rem)",
+              color: "#3c3228",
+              fontWeight: 400,
+              lineHeight: 1.1,
+              marginBottom: "0.6rem",
+            }}
+          >
+            Countdown
+          </h1>
+
+          <p
+            style={{
+              fontFamily: "var(--font-cookie), cursive",
+              fontSize: "clamp(0.9rem, 2.2vw, 1.05rem)",
+              letterSpacing: "0.22em",
+              color: "#7a6a5a",
+              marginBottom: "clamp(1.5rem, 5vw, 3rem)",
+            }}
+          >
+            UNTIL 08 AUGUST 2026
+          </p>
+
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            {/* Days */}
+            <div
+              style={{
+                textAlign: "center",
+                padding: "0 clamp(1rem, 3vw, 2.5rem)",
+              }}
+            >
+              <div
+                key={`days-${time.days}`}
+                className="count-number"
+                style={{
+                  fontFamily: "var(--font-cookie), cursive",
+                  fontSize: "clamp(3rem, 9vw, 5.5rem)",
+                  color: "#3c3228",
+                  fontWeight: 400,
+                  lineHeight: 1,
+                }}
+              >
+                {pad(time.days)}
+              </div>
+              <p
+                style={{
+                  fontFamily: "var(--font-cookie), cursive",
+                  fontSize: "clamp(0.85rem, 2vw, 1rem)",
+                  letterSpacing: "0.2em",
+                  color: "#7a6a5a",
+                  marginTop: "0.6rem",
+                }}
+              >
+                DAYS
+              </p>
+            </div>
+
+            <div
+              style={{
+                width: "1px",
+                height: "clamp(50px, 10vw, 80px)",
+                background: "#c4a882",
+                flexShrink: 0,
+              }}
+            />
+
+            {/* Hours */}
+            <div
+              style={{
+                textAlign: "center",
+                padding: "0 clamp(1rem, 3vw, 2.5rem)",
+              }}
+            >
+              <div
+                key={`hours-${time.hours}`}
+                className="count-number"
+                style={{
+                  fontFamily: "var(--font-cookie), cursive",
+                  fontSize: "clamp(3rem, 9vw, 5.5rem)",
+                  color: "#3c3228",
+                  fontWeight: 400,
+                  lineHeight: 1,
+                }}
+              >
+                {pad(time.hours)}
+              </div>
+              <p
+                style={{
+                  fontFamily: "var(--font-cookie), cursive",
+                  fontSize: "clamp(0.85rem, 2vw, 1rem)",
+                  letterSpacing: "0.2em",
+                  color: "#7a6a5a",
+                  marginTop: "0.6rem",
+                }}
+              >
+                HOURS
+              </p>
+            </div>
+
+            <div
+              style={{
+                width: "1px",
+                height: "clamp(50px, 10vw, 80px)",
+                background: "#c4a882",
+                flexShrink: 0,
+              }}
+            />
+
+            {/* Minutes */}
+            <div
+              style={{
+                textAlign: "center",
+                padding: "0 clamp(1rem, 3vw, 2.5rem)",
+              }}
+            >
+              <div
+                key={`minutes-${time.minutes}`}
+                className="count-number"
+                style={{
+                  fontFamily: "var(--font-cookie), cursive",
+                  fontSize: "clamp(3rem, 9vw, 5.5rem)",
+                  color: "#3c3228",
+                  fontWeight: 400,
+                  lineHeight: 1,
+                }}
+              >
+                {pad(time.minutes)}
+              </div>
+              <p
+                style={{
+                  fontFamily: "var(--font-cookie), cursive",
+                  fontSize: "clamp(0.85rem, 2vw, 1rem)",
+                  letterSpacing: "0.2em",
+                  color: "#7a6a5a",
+                  marginTop: "0.6rem",
+                }}
+              >
+                MINUTES
+              </p>
+            </div>
+            <div
+              style={{
+                width: "1px",
+                height: "clamp(50px, 10vw, 80px)",
+                background: "#c4a882",
+                flexShrink: 0,
+              }}
+            />
+
+            {/* Seconds */}
+            <div
+              style={{
+                textAlign: "center",
+                padding: "0 clamp(1rem, 3vw, 2.5rem)",
+              }}
+            >
+              <div
+                key={`seconds-${time.seconds}`}
+                className="count-number"
+                style={{
+                  fontFamily: "var(--font-cookie), cursive",
+                  fontSize: "clamp(3rem, 9vw, 5.5rem)",
+                  color: "#3c3228",
+                  fontWeight: 400,
+                  lineHeight: 1,
+                }}
+              >
+                {pad(time.seconds)}
+              </div>
+
+              <p
+                style={{
+                  fontFamily: "var(--font-cookie), cursive",
+                  fontSize: "clamp(0.85rem, 2vw, 1rem)",
+                  letterSpacing: "0.2em",
+                  color: "#7a6a5a",
+                  marginTop: "0.6rem",
+                }}
+              >
+                SECONDS
+              </p>
+            </div>
+          </div>
+
+          <div style={{ marginTop: "clamp(1.5rem, 4vw, 2.5rem)" }}>
+            <div
+              style={{
+                width: "6px",
+                height: "6px",
+                borderRadius: "50%",
+                background: "#c4a882",
+                margin: "0 auto",
+              }}
+            />
+          </div>
+        </div>
+      </section>
 
       {/* ── The Celebrations Section ── */}
       <section
@@ -957,8 +1228,6 @@ useEffect(() => {
             NIKKAH CEREMONY
           </h2>
 
-        
-
           {/* Date range */}
           <p
             style={{
@@ -986,9 +1255,18 @@ useEffect(() => {
               wordSpacing: "0.1em",
             }}
           >
-            Let’s celebrate the joyous moment of our families coming together at the Nikkah of our beloved children 
-            <br/>
-            <span style={{ fontSize: "1.4em", fontStyle: "normal", color: "#6b5c52" }}>Rafey &amp; Minahil</span>
+            Let’s celebrate the joyous moment of our families coming together at
+            the Nikkah of our beloved children
+            <br />
+            <span
+              style={{
+                fontSize: "1.4em",
+                fontStyle: "normal",
+                color: "#6b5c52",
+              }}
+            >
+              Minahil  &amp; Rafey
+            </span>
           </p>
 
           {/* ── Timeline ── */}
@@ -1001,7 +1279,7 @@ useEffect(() => {
               paddingLeft: "2rem",
             }}
           >
-            Event Timeline 
+            Event Timeline
             <div
               style={{
                 position: "absolute",
@@ -1012,12 +1290,10 @@ useEffect(() => {
                 background: "#d4c8b8",
               }}
             />
-
             {[
               {
                 time: "7:00 PM",
-                label:
-                  "Guest arrival",
+                label: "Guest arrival",
               },
               {
                 time: "7:30 npm",
@@ -1025,13 +1301,11 @@ useEffect(() => {
               },
               {
                 time: "8:30 PM",
-                label:
-                  "Dinner ",
+                label: "Dinner ",
               },
-               {
+              {
                 time: "10:00 PM",
-                label:
-                  "Event concludes",
+                label: "Event concludes",
               },
             ].map((item, i) => (
               <div
@@ -1219,8 +1493,10 @@ useEffect(() => {
                 wordSpacing: "0.1em",
               }}
             >
-              Your prayers and presence mean the world to us.<br/> Awaiting for your blessed presence
+              Your prayers and presence mean the world to us.
+               Awaiting for your blessed presence
             </p>
+            
 
             <div
               style={{
@@ -1231,7 +1507,7 @@ useEffect(() => {
               }}
             >
               <div>
-                {/* <p
+                <p
                   style={{
                     fontFamily: "var(--font-cookie), cursive",
                     fontSize: "1rem",
@@ -1240,8 +1516,34 @@ useEffect(() => {
                     marginBottom: "0.25rem",
                   }}
                 >
-                  Faisal Azhar
-                </p> */}
+                  Ch. M. Shafi Arshad
+                </p>
+                <a
+                  href="tel:+923336660400"
+                  style={{
+                    fontFamily: "var(--font-cookie), cursive",
+                    fontSize: "0.82rem",
+                    color: "#B76E79",
+                    textDecoration: "none",
+                    letterSpacing: "0.04em",
+                  }}
+                >
+                  0333-6660400
+                </a>
+              </div>
+
+              <div>
+                <p
+                  style={{
+                    fontFamily: "var(--font-cookie), cursive",
+                    fontSize: "1rem",
+                    color: "#3c3228",
+                    fontWeight: 700,
+                    marginBottom: "0.25rem",
+                  }}
+                >
+                  Muhammad Shahzad Rafi
+                </p>
                 <a
                   href="tel:+923214022085"
                   style={{
@@ -1257,7 +1559,7 @@ useEffect(() => {
               </div>
 
               <div>
-                {/* <p
+                <p
                   style={{
                     fontFamily: "var(--font-cookie), cursive",
                     fontSize: "1rem",
@@ -1266,10 +1568,10 @@ useEffect(() => {
                     marginBottom: "0.25rem",
                   }}
                 >
-                  Mubashir Azhar
-                </p> */}
+                  Mian Kamran Mehmood
+                </p>
                 <a
-                  href="tel:+923009489905"
+                  href="tel:+923214152766"
                   style={{
                     fontFamily: "var(--font-cookie), cursive",
                     fontSize: "0.82rem",
@@ -1278,12 +1580,11 @@ useEffect(() => {
                     letterSpacing: "0.04em",
                   }}
                 >
-                  0300-9489905
+                  0321-4152766
                 </a>
               </div>
-
               <div>
-                {/* <p
+                <p
                   style={{
                     fontFamily: "var(--font-cookie), cursive",
                     fontSize: "1rem",
@@ -1292,10 +1593,10 @@ useEffect(() => {
                     marginBottom: "0.25rem",
                   }}
                 >
-                  Kashif Shafiq
-                </p> */}
+                  Наbib alam
+                </p>
                 <a
-                  href="tel:+923233656591"
+                  href="tel:+923214149718"
                   style={{
                     fontFamily: "var(--font-cookie), cursive",
                     fontSize: "0.82rem",
@@ -1304,11 +1605,11 @@ useEffect(() => {
                     letterSpacing: "0.04em",
                   }}
                 >
-                  0323-3656591
+                  0321-4149718
                 </a>
               </div>
               <div>
-                {/* <p
+                <p
                   style={{
                     fontFamily: "var(--font-cookie), cursive",
                     fontSize: "1rem",
@@ -1317,8 +1618,33 @@ useEffect(() => {
                     marginBottom: "0.25rem",
                   }}
                 >
-                  Irfan Shakeel
-                </p> */}
+                  Zeeshan Rafi
+                </p>
+                <a
+                  href="tel:+923218888973"
+                  style={{
+                    fontFamily: "var(--font-cookie), cursive",
+                    fontSize: "0.82rem",
+                    color: "#B76E79",
+                    textDecoration: "none",
+                    letterSpacing: "0.04em",
+                  }}
+                >
+                  0321-8888973
+                </a>
+              </div>
+              <div>
+                <p
+                  style={{
+                    fontFamily: "var(--font-cookie), cursive",
+                    fontSize: "1rem",
+                    color: "#3c3228",
+                    fontWeight: 700,
+                    marginBottom: "0.25rem",
+                  }}
+                >
+                  Athar Mehmood Sheikh
+                </p>
                 <a
                   href="tel:+923334422155"
                   style={{
@@ -1332,6 +1658,18 @@ useEffect(() => {
                   0333-4422155
                 </a>
               </div>
+               <p
+              style={{
+                fontFamily: "var(--font-cookie), cursive",
+                fontSize: "clamp(1.4rem, 2.4vw, 1.2rem)",
+                color: "#7a6a5a",
+                lineHeight: 1.8,
+                marginBottom: "1.6rem",
+                wordSpacing: "0.1em",
+              }}
+            >
+              Looking Forward
+            </p>
             </div>
           </div>
 
