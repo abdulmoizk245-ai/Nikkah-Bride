@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@source "../";
+
+@theme {
+  --color-pink: #ffb7c5;
+  --color-pink-light: #fff0f3;
+  --color-pink-medium: #ffd6df;
+  --color-pink-dark: #8b4a5a;
+  --color-text: #1a1a1a;
+  --color-muted: #5a5a5a;
+
+  --font-dynalight: "Dynalight", cursive;
+  --font-hurricane: "Hurricane", cursive;
+  --font-engagement: "Engagement", cursive;
+  --font-cookie: "Cookie", cursive;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #ffffff;
+  color: #1a1a1a;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  font-family: var(--font-cookie), cursive;
+}
+
+* {
+  font-family: var(--font-cookie), cursive;
+}
+
+p, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
