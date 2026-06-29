@@ -261,9 +261,12 @@ export default function Wedding() {
               letterSpacing: "0.22em",
               color: "#8a7a6a",
               marginBottom: "1.2rem",
+              marginTop:"1.5rem"
             }}
           >
-            NIKKAH CEREMONY · 2026
+            {/* NIKKAH CEREMONY · 2026 */}
+             Mr & Mrs. Rafi Anwar Request the Pleasure of your company at the
+            Nikkah Ceremony of their Beloved Grand Daughter
           </p>
 
           {/* Monogram */}
@@ -377,8 +380,7 @@ export default function Wedding() {
               marginBottom: "2.6rem",
             }}
           >
-            Mr & Mrs. Rafi Anwar Request the Pleasure of your company at the
-            Nikkah Ceremony of their Beloved Grand Daughter
+           NIKKAH CEREMONY · 2026 
           </p>
 
           {/* Date display: JULY | 23 | 2026 */}
