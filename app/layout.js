@@ -37,10 +37,22 @@ export const metadata = {
     "Join us for the Nikkah Ceremony of Rafey & Minahil on 8th August 2026 at Emerald Banquet Hall, Lahore",
 };
 
+// export default function RootLayout({ children }) {
+//   return (
+//     <html lang="en" className={`${dynalight.variable} ${hurricane.variable} ${engagement.variable} ${cookie.variable} ${merienda.variable}`}>
+//       <body>{children}</body>
+//     </html>
+//   );
+// }
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${dynalight.variable} ${hurricane.variable} ${engagement.variable} ${cookie.variable} ${merienda.variable}`}>
-      <body>{children}</body>
+    <html
+      lang="en"
+      className={`${dynalight.variable} ${hurricane.variable} ${engagement.variable} ${cookie.variable} ${merienda.variable}`}
+    >
+      <body style={{ backgroundColor: "#F2ECE3" }}>
+        {children}
+      </body>
     </html>
   );
 }

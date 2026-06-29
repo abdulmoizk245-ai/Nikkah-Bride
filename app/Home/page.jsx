@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
 const WEDDING_DATE = new Date("2026-08-08T18:00:00");
@@ -300,10 +300,10 @@ export default function Wedding() {
               <h1
                 style={{
                   fontFamily: "var(--font-merienda), cursive",
-                  fontSize: "clamp(2.8rem, 25vw, 5rem)",
+                  fontSize: "clamp(3rem, 25vw, 1rem)",
                   color: "#3c3228",
                   fontWeight: 400,
-                  lineHeight: 1,
+                  lineHeight: 1.5,
                   margin: 0,
                 }}
               >
@@ -311,7 +311,7 @@ export default function Wedding() {
               </h1>
 
               <p
-                className="text-center text-[17px] font-medium tracking-[0.14em] text-[#3c3228]/80 md:text-[16px]"
+                className="text-center text-[12px] font-medium tracking-[0.14em] text-[#3c3228]/80 md:text-[16px]"
                 style={{
                   fontFamily: "var(--font-merienda), cursive",
                   wordSpacing: "0.08em",
@@ -337,14 +337,14 @@ export default function Wedding() {
             </h1>
 
             {/* Rafey */}
-            <div className="flex flex-col items-center gap-1">
+            <div className="flex flex-col items-center gap-1 mb-5 s">
               <h1
                 style={{
                   fontFamily: "var(--font-merienda), cursive",
-                  fontSize: "clamp(2.8rem, 25vw, 5rem)",
+                  fontSize: "clamp(3rem, 25vw, 1rem)",
                   color: "#3c3228",
                   fontWeight: 400,
-                  lineHeight: 1,
+                  lineHeight: 1.5,
                   margin: 0,
                 }}
               >
@@ -352,7 +352,7 @@ export default function Wedding() {
               </h1>
 
               <p
-                className="text-center  text-[19px] font-medium tracking-[0.14em] text-[#3c3228]/80 md:text-[16px]"
+                className="text-center mt-4  text-[12px] font-medium tracking-[0.14em] text-[#3c3228]/80 md:text-[16px]"
                 style={{
                   fontFamily: "var(--font-merienda), cursive",
                   wordSpacing: "0.08em",
@@ -367,7 +367,7 @@ export default function Wedding() {
           <p
             style={{
               fontFamily: "var(--font-merienda), cursive",
-              fontSize: "clamp(0.85rem, 2vw, 1rem)",
+              fontSize: "clamp(0.75rem, 2vw, 1rem)",
               letterSpacing: "0.18em",
               color: "#6a5a4a",
               lineHeight: 1.9,
@@ -378,7 +378,7 @@ export default function Wedding() {
             }}
           >
             Mr & Mrs. Rafi Anwar Request the Pleasure of your company at the
-            Nikkah Ceremony <br /> of their Beloved Grand Daughter
+            Nikkah Ceremony of their Beloved Grand Daughter
           </p>
 
           {/* Date display: JULY | 23 | 2026 */}
@@ -643,164 +643,58 @@ export default function Wedding() {
               alignItems: "center",
             }}
           >
-            {/* Days */}
-            <div
-              style={{
-                textAlign: "center",
-                padding: "0 clamp(1rem, 3vw, 2.5rem)",
-              }}
-            >
-              <div
-                key={`days-${time.days}`}
-                className="count-number"
-                style={{
-                  fontFamily: "var(--font-merienda), cursive",
-                  fontSize: "clamp(3rem, 9vw, 5.5rem)",
-                  color: "#3c3228",
-                  fontWeight: 400,
-                  lineHeight: 1,
-                }}
-              >
-                {pad(time.days)}
-              </div>
-              <p
-                style={{
-                  fontFamily: "var(--font-merienda), cursive",
-                  fontSize: "clamp(0.85rem, 2vw, 1rem)",
-                  letterSpacing: "0.2em",
-                  color: "#7a6a5a",
-                  marginTop: "0.6rem",
-                }}
-              >
-                DAYS
-              </p>
-            </div>
+            {[
+              ["days", time.days, "DAYS"],
+              ["hours", time.hours, "HOURS"],
+              ["minutes", time.minutes, "MINUTES"],
+              ["seconds", time.seconds, "SECONDS"],
+            ].map(([key, value, label], index) => (
+              <React.Fragment key={key}>
+                <div
+                  style={{
+                    textAlign: "center",
+                    padding: "0 clamp(0.45rem, 1.5vw, 1.2rem)",
+                  }}
+                >
+                  <div
+                    key={`${key}-${value}`}
+                    className="count-number"
+                    style={{
+                      fontFamily: "var(--font-merienda), cursive",
+                      fontSize: "clamp(1.8rem, 5vw, 3rem)",
+                      color: "#3c3228",
+                      fontWeight: 400,
+                      lineHeight: 1,
+                    }}
+                  >
+                    {pad(value)}
+                  </div>
 
-            <div
-              style={{
-                width: "1px",
-                height: "clamp(50px, 10vw, 80px)",
-                background: "#c4a882",
-                flexShrink: 0,
-              }}
-            />
+                  <p
+                    style={{
+                      fontFamily: "var(--font-merienda), cursive",
+                      fontSize: "clamp(0.55rem, 1.4vw, 0.75rem)",
+                      letterSpacing: "0.14em",
+                      color: "#7a6a5a",
+                      marginTop: "0.35rem",
+                    }}
+                  >
+                    {label}
+                  </p>
+                </div>
 
-            {/* Hours */}
-            <div
-              style={{
-                textAlign: "center",
-                padding: "0 clamp(1rem, 3vw, 2.5rem)",
-              }}
-            >
-              <div
-                key={`hours-${time.hours}`}
-                className="count-number"
-                style={{
-                  fontFamily: "var(--font-merienda), cursive",
-                  fontSize: "clamp(3rem, 9vw, 5.5rem)",
-                  color: "#3c3228",
-                  fontWeight: 400,
-                  lineHeight: 1,
-                }}
-              >
-                {pad(time.hours)}
-              </div>
-              <p
-                style={{
-                  fontFamily: "var(--font-merienda), cursive",
-                  fontSize: "clamp(0.85rem, 2vw, 1rem)",
-                  letterSpacing: "0.2em",
-                  color: "#7a6a5a",
-                  marginTop: "0.6rem",
-                }}
-              >
-                HOURS
-              </p>
-            </div>
-
-            <div
-              style={{
-                width: "1px",
-                height: "clamp(50px, 10vw, 80px)",
-                background: "#c4a882",
-                flexShrink: 0,
-              }}
-            />
-
-            {/* Minutes */}
-            <div
-              style={{
-                textAlign: "center",
-                padding: "0 clamp(1rem, 3vw, 2.5rem)",
-              }}
-            >
-              <div
-                key={`minutes-${time.minutes}`}
-                className="count-number"
-                style={{
-                  fontFamily: "var(--font-merienda), cursive",
-                  fontSize: "clamp(3rem, 9vw, 5.5rem)",
-                  color: "#3c3228",
-                  fontWeight: 400,
-                  lineHeight: 1,
-                }}
-              >
-                {pad(time.minutes)}
-              </div>
-              <p
-                style={{
-                  fontFamily: "var(--font-merienda), cursive",
-                  fontSize: "clamp(0.85rem, 2vw, 1rem)",
-                  letterSpacing: "0.2em",
-                  color: "#7a6a5a",
-                  marginTop: "0.6rem",
-                }}
-              >
-                MINUTES
-              </p>
-            </div>
-            <div
-              style={{
-                width: "1px",
-                height: "clamp(50px, 10vw, 80px)",
-                background: "#c4a882",
-                flexShrink: 0,
-              }}
-            />
-
-            {/* Seconds */}
-            <div
-              style={{
-                textAlign: "center",
-                padding: "0 clamp(1rem, 3vw, 2.5rem)",
-              }}
-            >
-              <div
-                key={`seconds-${time.seconds}`}
-                className="count-number"
-                style={{
-                  fontFamily: "var(--font-merienda), cursive",
-                  fontSize: "clamp(3rem, 9vw, 5.5rem)",
-                  color: "#3c3228",
-                  fontWeight: 400,
-                  lineHeight: 1,
-                }}
-              >
-                {pad(time.seconds)}
-              </div>
-
-              <p
-                style={{
-                  fontFamily: "var(--font-merienda), cursive",
-                  fontSize: "clamp(0.85rem, 2vw, 1rem)",
-                  letterSpacing: "0.2em",
-                  color: "#7a6a5a",
-                  marginTop: "0.6rem",
-                }}
-              >
-                SECONDS
-              </p>
-            </div>
+                {index !== 3 && (
+                  <div
+                    style={{
+                      width: "1px",
+                      height: "clamp(32px, 6vw, 50px)",
+                      background: "#c4a882",
+                      flexShrink: 0,
+                    }}
+                  />
+                )}
+              </React.Fragment>
+            ))}
           </div>
 
           <div style={{ marginTop: "clamp(1.5rem, 4vw, 2.5rem)" }}>
@@ -821,7 +715,9 @@ export default function Wedding() {
       <section
         style={{
           background: "#f2ece3",
-          padding: "clamp(3rem, 8vw, 5rem) 1.5rem clamp(3rem, 8vw, 5rem)",
+          // padding: "clamp(3rem, 8vw, 5rem) 1.5rem clamp(3rem, 8vw, 5rem)",
+          padding: "0 1.5rem clamp(3rem, 8vw, 5rem)",
+
           textAlign: "center",
         }}
       >
@@ -1049,7 +945,7 @@ export default function Wedding() {
             <h3
               style={{
                 fontFamily: "var(--font-merienda), cursive",
-                fontSize: "clamp(2rem, 6vw, 2.5rem)",
+                fontSize: "clamp(1rem, 6vw, 2.5rem)",
                 color: "#3c3228",
                 fontWeight: 600,
                 lineHeight: 1.1,
@@ -1063,10 +959,10 @@ export default function Wedding() {
             <h3
               style={{
                 fontFamily: "var(--font-merienda), cursive",
-                fontSize: "clamp(2rem, 6vw, 2.5rem)",
+                fontSize: "clamp(1rem, 6vw, 2.5rem)",
                 color: "#3c3228",
                 fontWeight: 600,
-                lineHeight: 1.1,
+                lineHeight: 1.6,
                 marginBottom: "1.4rem",
               }}
             >
@@ -1218,10 +1114,10 @@ export default function Wedding() {
           <h2
             style={{
               fontFamily: "var(--font-merienda), cursive",
-              fontSize: "clamp(2.2rem, 7vw, 3.5rem)",
+              fontSize: "clamp(1.8rem, 7vw, 1.5rem)",
               color: "#3c3228",
               fontWeight: 600,
-              lineHeight: 1.1,
+              lineHeight: 1.8,
               marginBottom: "0.8rem",
             }}
           >
@@ -1246,12 +1142,12 @@ export default function Wedding() {
           <p
             style={{
               fontFamily: "var(--font-merienda), cursive",
-              fontSize: "clamp(1.4rem, 2.4vw, 1.2rem)",
+              fontSize: "clamp(1.1rem, 2.4vw, 1.2rem)",
               color: "#8a7f74",
               fontStyle: "italic",
-              lineHeight: 1.7,
+              lineHeight: 2,
               maxWidth: "300px",
-              margin: "0 auto 1.2rem",
+              // margin: "0 auto 1.2rem",
               wordSpacing: "0.1em",
             }}
           >
@@ -1263,17 +1159,19 @@ export default function Wedding() {
                 fontSize: "1.4em",
                 fontStyle: "normal",
                 color: "#6b5c52",
+                lineHeight: 4,
               }}
             >
-              Minahil  &amp; Rafey
+              Minahil &amp; Rafey
             </span>
           </p>
 
           {/* ── Timeline ── */}
           <div
+            className=""
             style={{
               maxWidth: "300px",
-              margin: "clamp(1.5rem, 4vw, 2.5rem) auto 0",
+              margin: "clamp(0rem, 0vw, 0rem) auto 0",
               textAlign: "left",
               position: "relative",
               paddingLeft: "2rem",
@@ -1473,7 +1371,7 @@ export default function Wedding() {
             <h3
               style={{
                 fontFamily: "var(--font-merienda), cursive",
-                fontSize: "clamp(2rem, 6vw, 2.8rem)",
+                fontSize: "clamp(1.6em, 6vw, 1rem)",
                 color: "#3c3228",
                 fontWeight: 600,
                 marginBottom: "0.8rem",
@@ -1486,17 +1384,16 @@ export default function Wedding() {
             <p
               style={{
                 fontFamily: "var(--font-merienda), cursive",
-                fontSize: "clamp(1.4rem, 2.4vw, 1.2rem)",
+                fontSize: "clamp(0.9rem, 2.4vw, 1.2rem)",
                 color: "#7a6a5a",
                 lineHeight: 1.8,
                 marginBottom: "1.6rem",
                 wordSpacing: "0.1em",
               }}
             >
-              Your prayers and presence mean the world to us.
-               Awaiting for your blessed presence
+              Your prayers and presence mean the world to us. Awaiting for your
+              blessed presence
             </p>
-            
 
             <div
               style={{
@@ -1510,10 +1407,11 @@ export default function Wedding() {
                 <p
                   style={{
                     fontFamily: "var(--font-merienda), cursive",
-                    fontSize: "1rem",
+                    fontSize: "0.9rem",
                     color: "#3c3228",
                     fontWeight: 700,
                     marginBottom: "0.25rem",
+                    marginTop: "0.35rem",
                   }}
                 >
                   Ch. M. Shafi Arshad
@@ -1536,10 +1434,11 @@ export default function Wedding() {
                 <p
                   style={{
                     fontFamily: "var(--font-merienda), cursive",
-                    fontSize: "1rem",
+                    fontSize: "0.9rem",
                     color: "#3c3228",
                     fontWeight: 700,
                     marginBottom: "0.25rem",
+                    marginTop: "0.35rem",
                   }}
                 >
                   Muhammad Shahzad Rafi
@@ -1562,10 +1461,11 @@ export default function Wedding() {
                 <p
                   style={{
                     fontFamily: "var(--font-merienda), cursive",
-                    fontSize: "1rem",
+                    fontSize: "0.9rem",
                     color: "#3c3228",
                     fontWeight: 700,
                     marginBottom: "0.25rem",
+                    marginTop: "0.35rem",
                   }}
                 >
                   Mian Kamran Mehmood
@@ -1574,10 +1474,11 @@ export default function Wedding() {
                   href="tel:+923214152766"
                   style={{
                     fontFamily: "var(--font-merienda), cursive",
-                    fontSize: "0.82rem",
-                    color: "#B76E79",
-                    textDecoration: "none",
-                    letterSpacing: "0.04em",
+                    fontSize: "0.9rem",
+                    color: "#3c3228",
+                    fontWeight: 700,
+                    marginBottom: "0.25rem",
+                    marginTop: "0.35rem",
                   }}
                 >
                   0321-4152766
@@ -1587,13 +1488,14 @@ export default function Wedding() {
                 <p
                   style={{
                     fontFamily: "var(--font-merienda), cursive",
-                    fontSize: "1rem",
+                    fontSize: "0.9rem",
                     color: "#3c3228",
                     fontWeight: 700,
                     marginBottom: "0.25rem",
+                    marginTop: "0.35rem",
                   }}
                 >
-                  Наbib alam
+                  Habib Alam
                 </p>
                 <a
                   href="tel:+923214149718"
@@ -1612,10 +1514,11 @@ export default function Wedding() {
                 <p
                   style={{
                     fontFamily: "var(--font-merienda), cursive",
-                    fontSize: "1rem",
+                    fontSize: "0.9rem",
                     color: "#3c3228",
                     fontWeight: 700,
                     marginBottom: "0.25rem",
+                    marginTop: "0.35rem",
                   }}
                 >
                   Zeeshan Rafi
@@ -1637,10 +1540,11 @@ export default function Wedding() {
                 <p
                   style={{
                     fontFamily: "var(--font-merienda), cursive",
-                    fontSize: "1rem",
+                    fontSize: "0.9rem",
                     color: "#3c3228",
                     fontWeight: 700,
                     marginBottom: "0.25rem",
+                    marginTop: "0.35rem",
                   }}
                 >
                   Athar Mehmood Sheikh
@@ -1658,18 +1562,18 @@ export default function Wedding() {
                   0333-4422155
                 </a>
               </div>
-               <p
-              style={{
-                fontFamily: "var(--font-merienda), cursive",
-                fontSize: "clamp(1.4rem, 2.4vw, 1.2rem)",
-                color: "#7a6a5a",
-                lineHeight: 1.8,
-                marginBottom: "1.6rem",
-                wordSpacing: "0.1em",
-              }}
-            >
-              Looking Forward
-            </p>
+              <p
+                style={{
+                  fontFamily: "var(--font-merienda), cursive",
+                  fontSize: "clamp(1.6rem, 2.4vw, 1.2rem)",
+                  color: "#7a6a5a",
+                  lineHeight: 1.8,
+                  marginTop: "2.6rem",
+                  wordSpacing: "0.1em",
+                }}
+              >
+                Looking Forward
+              </p>
             </div>
           </div>
 
