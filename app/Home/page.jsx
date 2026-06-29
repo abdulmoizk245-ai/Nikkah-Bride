@@ -252,6 +252,18 @@ export default function Wedding() {
           >
             In The Name of Allah The Most Beneficent And The Most Merciful{" "}
           </p>
+          <p
+            style={{
+              fontFamily: "var(--font-merienda), cursive",
+              fontSize: "clamp(1rem, 3vw, 1.4rem)",
+              color: "#5a4a3a",
+              direction: "rtl",
+              marginBottom: "0.4rem",
+              lineHeight: 1.8,
+            }}
+          >
+            In The Name of Allah The Most Beneficent And The Most Merciful{" "}
+          </p>
 
           {/* Nikkah Ceremony label */}
           <p
@@ -556,162 +568,7 @@ export default function Wedding() {
         </div>
       </section>
 
-      {/* ── Countdown Section ── */}
-      <section
-        style={{
-          position: "relative",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          background: "#f7f0e8",
-          overflow: "hidden",
-          padding: "clamp(2.5rem, 6vw, 4rem) 0",
-        }}
-      >
-        {/* Left Pillar */}
-        <div
-          style={{
-            position: "absolute",
-            left: 0,
-            top: 0,
-            bottom: 0,
-            width: "clamp(60px, 14vw, 130px)",
-          }}
-        >
-          <Image
-            src="/images/column-left-Deau9Trj.png"
-            alt="left pillar"
-            fill
-            style={{ objectFit: "contain", objectPosition: "left center" }}
-            priority
-          />
-        </div>
-
-        {/* Right Pillar */}
-        <div
-          style={{
-            position: "absolute",
-            right: 0,
-            top: 0,
-            bottom: 0,
-            width: "clamp(60px, 14vw, 130px)",
-          }}
-        >
-          <Image
-            src="/images/column-right-DejZoXz8.png"
-            alt="right pillar"
-            fill
-            style={{ objectFit: "contain", objectPosition: "right center" }}
-            priority
-          />
-        </div>
-
-        {/* Center Content */}
-        <div
-          style={{
-            textAlign: "center",
-            padding: "2rem clamp(80px, 16vw, 160px)",
-          }}
-        >
-          <h1
-            style={{
-              fontFamily: "var(--font-merienda), cursive",
-              fontSize: "clamp(2.8rem, 8vw, 5rem)",
-              color: "#3c3228",
-              fontWeight: 400,
-              lineHeight: 1.1,
-              marginBottom: "0.6rem",
-            }}
-          >
-            Countdown
-          </h1>
-
-          <p
-            style={{
-              fontFamily: "var(--font-merienda), cursive",
-              fontSize: "clamp(0.9rem, 2.2vw, 1.05rem)",
-              letterSpacing: "0.22em",
-              color: "#7a6a5a",
-              marginBottom: "clamp(1.5rem, 5vw, 3rem)",
-            }}
-          >
-            UNTIL 08 AUGUST 2026
-          </p>
-
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            {[
-              ["days", time.days, "DAYS"],
-              ["hours", time.hours, "HOURS"],
-              ["minutes", time.minutes, "MINUTES"],
-              ["seconds", time.seconds, "SECONDS"],
-            ].map(([key, value, label], index) => (
-              <React.Fragment key={key}>
-                <div
-                  style={{
-                    textAlign: "center",
-                    padding: "0 clamp(0.45rem, 1.5vw, 1.2rem)",
-                  }}
-                >
-                  <div
-                    key={`${key}-${value}`}
-                    className="count-number"
-                    style={{
-                      fontFamily: "var(--font-merienda), cursive",
-                      fontSize: "clamp(1.8rem, 5vw, 3rem)",
-                      color: "#3c3228",
-                      fontWeight: 400,
-                      lineHeight: 1,
-                    }}
-                  >
-                    {pad(value)}
-                  </div>
-
-                  <p
-                    style={{
-                      fontFamily: "var(--font-merienda), cursive",
-                      fontSize: "clamp(0.55rem, 1.4vw, 0.75rem)",
-                      letterSpacing: "0.14em",
-                      color: "#7a6a5a",
-                      marginTop: "0.35rem",
-                    }}
-                  >
-                    {label}
-                  </p>
-                </div>
-
-                {index !== 3 && (
-                  <div
-                    style={{
-                      width: "1px",
-                      height: "clamp(32px, 6vw, 50px)",
-                      background: "#c4a882",
-                      flexShrink: 0,
-                    }}
-                  />
-                )}
-              </React.Fragment>
-            ))}
-          </div>
-
-          <div style={{ marginTop: "clamp(1.5rem, 4vw, 2.5rem)" }}>
-            <div
-              style={{
-                width: "6px",
-                height: "6px",
-                borderRadius: "50%",
-                background: "#c4a882",
-                margin: "0 auto",
-              }}
-            />
-          </div>
-        </div>
-      </section>
+   
 
       {/* ── The Celebrations Section ── */}
       <section
@@ -1149,7 +1006,7 @@ export default function Wedding() {
               fontStyle: "italic",
               lineHeight: 2,
               maxWidth: "300px",
-              // margin: "0 auto 1.2rem",
+              margin: "0 auto 1.2rem",
               wordSpacing: "0.1em",
             }}
           >
@@ -1477,7 +1334,7 @@ export default function Wedding() {
                   style={{
                     fontFamily: "var(--font-merienda), cursive",
                     fontSize: "0.9rem",
-                    color: "#3c3228",
+                    color: "#B76E79",
                     fontWeight: 700,
                     marginBottom: "0.25rem",
                     marginTop: "0.35rem",
